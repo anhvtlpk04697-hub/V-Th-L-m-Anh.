@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang giới thiệu cá nhân - Vũ Thị Lâm Anh - Sinh viên Cao đẳng FPT Polytechnic">
+    <title>Vũ Thị Lâm Anh | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">✦</span>
+                Lâm Anh
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#education" class="nav-link">Học vấn</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#hobbies" class="nav-link">Sở thích</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="bg.png" alt="background" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-avatar-wrapper">
+                <div class="avatar-ring">
+                    <div class="avatar-glow"></div>
+                    <img src="avatar.png" alt="Vũ Thị Lâm Anh" class="hero-avatar">
+                </div>
+                <div class="avatar-status">
+                    <span class="status-dot"></span>
+                    Sinh viên
+                </div>
+            </div>
+            <div class="hero-text">
+                <p class="hero-greeting">Xin chào, tôi là</p>
+                <h1 class="hero-name">
+                    <span class="name-line">Vũ Thị</span>
+                    <span class="name-highlight">Lâm Anh</span>
+                </h1>
+                <div class="hero-tagline">
+                    <span class="tagline-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Sinh viên Cao đẳng FPT Polytechnic • MSSV: PK04687
+                </p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">
+                        <i class="fas fa-user"></i>
+                        Tìm hiểu thêm
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Liên hệ
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Cuộn xuống</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-star"></i>
+                    Về tôi
+                </span>
+                <h2 class="section-title">Giới thiệu bản thân</h2>
+                <p class="section-subtitle">Hãy để tôi giới thiệu một chút về bản thân mình nhé!</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card reveal">
+                    <div class="about-card-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Thông tin cá nhân</h3>
+                    <ul class="info-list">
+                        <li>
+                            <span class="info-label"><i class="fas fa-user"></i> Họ và tên</span>
+                            <span class="info-value">Vũ Thị Lâm Anh</span>
+                        </li>
+                        <li>
+                            <span class="info-label"><i class="fas fa-hashtag"></i> MSSV</span>
+                            <span class="info-value highlight-text">PK04687</span>
+                        </li>
+                        <li>
+                            <span class="info-label"><i class="fas fa-school"></i> Trường</span>
+                            <span class="info-value">CĐ FPT Polytechnic</span>
+                        </li>
+                        <li>
+                            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Địa chỉ</span>
+                            <span class="info-value">Việt Nam</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-card glass-card reveal" style="--delay: 0.2s">
+                    <div class="about-card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Về con người tôi</h3>
+                    <p class="about-text">
+                        Tôi là <strong>Vũ Thị Lâm Anh</strong>, hiện đang là sinh viên tại 
+                        <strong>Cao đẳng FPT Polytechnic</strong>. Tôi luôn nỗ lực học tập 
+                        và phát triển bản thân mỗi ngày. Với niềm đam mê công nghệ và sự sáng tạo, 
+                        tôi mong muốn được đóng góp giá trị cho cộng đồng và xã hội.
+                    </p>
+                    <p class="about-text">
+                        Tôi tin rằng mỗi ngày đều là một cơ hội mới để học hỏi và trưởng thành. 
+                        Phương châm sống của tôi là luôn kiên trì, không ngừng cố gắng và giữ vững 
+                        tinh thần tích cực.
+                    </p>
+                </div>
+                <div class="about-card glass-card reveal" style="--delay: 0.4s">
+                    <div class="about-card-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <h3>Phương châm sống</h3>
+                    <blockquote class="quote-block">
+                        <p>"Hãy là phiên bản tốt nhất của chính mình, không ngừng học hỏi và luôn giữ vững niềm tin vào bản thân."</p>
+                        <cite>— Lâm Anh</cite>
+                    </blockquote>
+                    <div class="stats-row">
+                        <div class="stat">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-unit">%</span>
+                            <span class="stat-label">Nhiệt huyết</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="24">0</span>
+                            <span class="stat-unit">/7</span>
+                            <span class="stat-label">Nỗ lực</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="99">0</span>
+                            <span class="stat-unit">%</span>
+                            <span class="stat-label">Tích cực</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    Học vấn
+                </span>
+                <h2 class="section-title">Quá trình học tập</h2>
+                <p class="section-subtitle">Hành trình học tập và phát triển của tôi</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge">Hiện tại</div>
+                        <h3>Cao đẳng FPT Polytechnic</h3>
+                        <p class="timeline-meta">
+                            <i class="fas fa-calendar"></i> Đang theo học
+                            <span class="dot-separator">•</span>
+                            <i class="fas fa-id-badge"></i> MSSV: PK04687
+                        </p>
+                        <p class="timeline-desc">
+                            Đang theo học tại Cao đẳng FPT Polytechnic — một trong những trường đào tạo 
+                            công nghệ thông tin hàng đầu Việt Nam. Tại đây, tôi được tiếp cận với 
+                            môi trường học tập năng động, thực hành nhiều và được trang bị những kiến thức 
+                            cũng như kỹ năng cần thiết cho nghề nghiệp tương lai.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag"><i class="fas fa-laptop-code"></i> Công nghệ</span>
+                            <span class="tag"><i class="fas fa-project-diagram"></i> Thực hành</span>
+                            <span class="tag"><i class="fas fa-users"></i> Teamwork</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge past">Trước đó</div>
+                        <h3>Trung học phổ thông</h3>
+                        <p class="timeline-meta">
+                            <i class="fas fa-calendar"></i> Đã hoàn thành
+                        </p>
+                        <p class="timeline-desc">
+                            Hoàn thành chương trình trung học phổ thông và quyết định theo đuổi con đường 
+                            học tập tại FPT Polytechnic để phát triển sự nghiệp trong lĩnh vực công nghệ.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag"><i class="fas fa-book"></i> Học tập</span>
+                            <span class="tag"><i class="fas fa-medal"></i> Nỗ lực</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-code"></i>
+                    Kỹ năng
+                </span>
+                <h2 class="section-title">Kỹ năng của tôi</h2>
+                <p class="section-subtitle">Những kỹ năng tôi đang học tập và phát triển</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon" style="--accent: #61DAFB">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Lập trình</h3>
+                    <p>Đang học tập và phát triển kỹ năng lập trình tại FPT Polytechnic</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70" style="--bar-color: #61DAFB"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal" style="--delay: 0.1s">
+                    <div class="skill-icon" style="--accent: #FF6B6B">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Thiết kế</h3>
+                    <p>Có niềm đam mê với thiết kế và sáng tạo nội dung</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="65" style="--bar-color: #FF6B6B"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal" style="--delay: 0.2s">
+                    <div class="skill-icon" style="--accent: #4ECDC4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Giao tiếp</h3>
+                    <p>Kỹ năng giao tiếp tốt, làm việc nhóm hiệu quả</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80" style="--bar-color: #4ECDC4"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal" style="--delay: 0.3s">
+                    <div class="skill-icon" style="--accent: #A78BFA">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Tư duy sáng tạo</h3>
+                    <p>Luôn tìm tòi và sáng tạo trong mọi việc làm</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75" style="--bar-color: #A78BFA"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal" style="--delay: 0.4s">
+                    <div class="skill-icon" style="--accent: #FBBF24">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Làm việc nhóm</h3>
+                    <p>Phối hợp nhịp nhàng, đóng góp tích cực trong nhóm</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85" style="--bar-color: #FBBF24"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal" style="--delay: 0.5s">
+                    <div class="skill-icon" style="--accent: #F472B6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Quản lý thời gian</h3>
+                    <p>Biết sắp xếp và quản lý thời gian hợp lý</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="72" style="--bar-color: #F472B6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="section section-alt" id="hobbies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-heart"></i>
+                    Sở thích
+                </span>
+                <h2 class="section-title">Sở thích cá nhân</h2>
+                <p class="section-subtitle">Những điều tôi yêu thích ngoài giờ học</p>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card glass-card reveal">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Nghe nhạc</h3>
+                    <p>Âm nhạc giúp tôi thư giãn và tìm cảm hứng sáng tạo</p>
+                </div>
+                <div class="hobby-card glass-card reveal" style="--delay: 0.1s">
+                    <div class="hobby-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Đọc sách</h3>
+                    <p>Tôi thích đọc sách để mở rộng kiến thức và tầm nhìn</p>
+                </div>
+                <div class="hobby-card glass-card reveal" style="--delay: 0.2s">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Chụp ảnh</h3>
+                    <p>Ghi lại những khoảnh khắc đẹp trong cuộc sống</p>
+                </div>
+                <div class="hobby-card glass-card reveal" style="--delay: 0.3s">
+                    <div class="hobby-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Du lịch</h3>
+                    <p>Khám phá những vùng đất mới, trải nghiệm văn hóa khác nhau</p>
+                </div>
+                <div class="hobby-card glass-card reveal" style="--delay: 0.4s">
+                    <div class="hobby-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Nấu ăn</h3>
+                    <p>Thích nấu những món ngon cho gia đình và bạn bè</p>
+                </div>
+                <div class="hobby-card glass-card reveal" style="--delay: 0.5s">
+                    <div class="hobby-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Xem phim</h3>
+                    <p>Giải trí và học hỏi qua những bộ phim hay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    Liên hệ
+                </span>
+                <h2 class="section-title">Kết nối với tôi</h2>
+                <p class="section-subtitle">Hãy liên hệ nếu bạn muốn trao đổi hoặc kết nối nhé!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card glass-card reveal">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>lamanhvt@fpt.edu.vn</p>
+                </div>
+                <div class="contact-card glass-card reveal" style="--delay: 0.1s">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Điện thoại</h3>
+                    <p>Liên hệ qua email</p>
+                </div>
+                <div class="contact-card glass-card reveal" style="--delay: 0.2s">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Vũ Thị Lâm Anh</p>
+                </div>
+            </div>
+            <div class="contact-message glass-card reveal" style="--delay: 0.3s">
+                <div class="message-emoji">💌</div>
+                <h3>Gửi lời nhắn</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" placeholder="Nhập họ và tên..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Nhập email..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn</label>
+                        <textarea id="message" rows="4" placeholder="Nhập lời nhắn..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Gửi lời nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">✦</span>
+                    Vũ Thị Lâm Anh
+                </div>
+                <p class="footer-text">Sinh viên Cao đẳng FPT Polytechnic • MSSV: PK04687</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">
+                    &copy; 2026 Vũ Thị Lâm Anh. Made with <span class="heart">❤</span> tại FPT Polytechnic
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
